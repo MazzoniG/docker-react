@@ -8,6 +8,7 @@ RUN npm run build
 
 #Creating a PROD container
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build usr/share/nginx/html
 
 
